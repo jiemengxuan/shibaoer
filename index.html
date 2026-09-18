@@ -9,7 +9,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="事宝儿">
-<meta name="theme-color" content="#F2553D">
+<meta name="theme-color" content="#F7F2EC">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%23F2553D"/><path d="M18 34l10 10 18-23" stroke="%23fff" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>'>
@@ -600,11 +600,15 @@ function themeColor(name){
   var t = THEMES[state.theme];
   return t && t[name] ? t[name] : '#F2553D';
 }
+function themePaper(){
+  var v = getComputedStyle(document.documentElement).getPropertyValue('--paper').trim();
+  return v || '#F7F2EC';
+}
 function applyTheme(t){
   t = t || 'sunset';
   document.documentElement.setAttribute('data-theme', t);
   var tc = document.querySelector('meta[name="theme-color"]');
-  if(tc){ tc.setAttribute('content', themeColor('brand')); }
+  if(tc){ tc.setAttribute('content', themePaper()); }
 }
 
 /* ---------- 数据层：IndexedDB ---------- */
