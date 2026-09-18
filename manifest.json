@@ -1,0 +1,16 @@
+{
+  "name": "事宝儿",
+  "short_name": "事宝儿",
+  "description": "我的工作与生活事项管家：待办、大项目、关系人名、数据本地保存。",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F7F2EC",
+  "theme_color": "#F2553D",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
